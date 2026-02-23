@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Weather App</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/favicon-32x32.png"
+    />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-logo">
+        <a href=""> <img src="./assets/images/logo.svg" alt="" /></a>
+      </div>
+
+      <select class="dropdown" name="" id="">
+        <option value="">
+          <i class="fa-solid fa-gear"></i>
+          Units
+        </option>
+      </select>
+    </header>
+
+    <main class="main">
+      <section class="search-section">
+        <h1>How's the sky looking today?</h1>
+        <div class="search-container">
+          <div class="search">
+            <input type="text" placeholder="Search for a place..." />
+            <i class="fa-solid fa-magnifying-glass"> </i>
+          </div>
+
+          <button class="btn" type="submit">Search</button>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="left-container">
+          <div class="city-date">
+            <h3 class="city">Barlin, Germany</h3>
+            <p class="date">Tuesday, Aug 5, 2025</p>
+          </div>
+
+          <div class="weather-now">
+            <img src="./assets/images/icon-sunny.webp" alt="" />
+            <p class="temp">68°</p>
+          </div>
+        </div>
+
+        <div class="weather-details">
+          <div class="detail">
+            <p class="detail-title">Feels Like</p>
+            <p class="detail-value">27°</p>
+          </div>
+          <div class="detail">
+            <p class="detail-title">Feels Like</p>
+            <p class="detail-value">27°</p>
+          </div>
+          <div class="detail">
+            <p class="detail-title">Feels Like</p>
+            <p class="detail-value">27°</p>
+          </div>
+          <div class="detail">
+            <p class="detail-title">Feels Like</p>
+            <p class="detail-value">27°</p>
+          </div>
+        </div>
+
+        <div class="daily-forecast">
+          <h2 class="section-title">Daily Forecast</h2>
+          <div class="forecast">
+            <div class="forecast-item">
+              <div class="day">Tue</div>
+              <img src="./assets/images/icon-storm.webp" alt="" />
+              <div class="temp-value">
+                <p>68°</p>
+                <p>57°</p>
+              </div>
+            </div>
+
+            <div class="forecast-item">
+              <div class="day">Tue</div>
+              <img src="./assets/images/icon-storm.webp" alt="" />
+              <div class="temp-value">
+                <p>68°</p>
+                <p>57°</p>
+              </div>
+            </div>
+
+            <div class="forecast-item">
+              <div class="day">Tue</div>
+              <img src="./assets/images/icon-storm.webp" alt="" />
+              <div class="temp-value">
+                <p>68°</p>
+                <p>57°</p>
+              </div>
+            </div>
+
+            <div class="forecast-item">
+              <div class="day">Tue</div>
+              <img src="./assets/images/icon-storm.webp" alt="" />
+              <div class="temp-value">
+                <p>68°</p>
+                <p>57°</p>
+              </div>
+            </div>
+
+            <div class="forecast-item">
+              <div class="day">Tue</div>
+              <img src="./assets/images/icon-storm.webp" alt="" />
+              <div class="temp-value">
+                <p>68°</p>
+                <p>57°</p>
+              </div>
+            </div>
+
+            <div class="forecast-item">
+              <div class="day">Tue</div>
+              <img src="./assets/images/icon-storm.webp" alt="" />
+              <div class="temp-value">
+                <p>68°</p>
+                <p>57°</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-container">
+          <div class="section-header">
+            <div class="section-title">Hourly forecast</div>
+            <select name="" id="">
+              <option value="Tuesday">Tuesday</option>
+            </select>
+          </div>
+
+          <div class="hourly-forecast-items">
+            <div class="h-forecast-item">
+              <div>
+                <img src="./assets/images/icon-snow.webp" alt="" />
+                <p>3 PM</p>
+              </div>
+              <p>68°</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

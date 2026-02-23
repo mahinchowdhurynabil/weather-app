@@ -1,0 +1,194 @@
+@layer global {
+  /* dm-sans-300 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 300;
+    src: url("/assets/fonts/dm-sans-v16-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* dm-sans-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/assets/fonts/dm-sans-v16-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* dm-sans-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/assets/fonts/dm-sans-v16-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* dm-sans-600italic - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "DM Sans";
+    font-style: italic;
+    font-weight: 600;
+    src: url("/assets/fonts/dm-sans-v16-latin-600italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* dm-sans-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/dm-sans-v16-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* bricolage-grotesque-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Bricolage Grotesque";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/bricolage-grotesque-v8-latin-700.woff2")
+      format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  :root {
+    --color-neutral-900: hsl(243, 96%, 9%);
+    --color-neutral-800: hsl(243, 27%, 20%);
+    --color-neutral-700: hsl(243, 23%, 24%);
+    --color-neutral-600: hsl(243, 23%, 30%);
+    --color-neutral-300: hsl(240, 6%, 70%);
+    --color-neutral-200: hsl(250, 6%, 84%);
+    --color-neutral-0: hsl(0, 0%, 100%);
+    --color-orange-500: hsl(28, 100%, 52%);
+    --color-blue-500: hsl(233, 67%, 56%);
+    --color-blue-700: hsl(248, 70%, 36%);
+
+    --text-color: var(--color-neutral-0);
+    --text-color-muted: var(var(--color-neutral-300));
+
+    --fs-96: calc(96 / 16 * 1rem);
+    --fs-52: calc(52 / 16 * 1rem);
+    --fs-32: calc(32 / 16 * 1rem);
+    --fs-28: calc(28 / 16 * 1rem);
+    --fs-20: calc(20 / 16 * 1rem);
+    --fs-18: calc(18 / 16 * 1rem);
+    --fs-16: calc(16 / 16 * 1rem);
+    --fs-14: calc(14 / 16 * 1rem);
+  }
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  display: block;
+  margin: 0px auto;
+  width: 80%;
+  font-family: "DM Sans", Arial, Arial, Helvetica, sans-serif;
+  background-color: var(--color-neutral-900);
+  color: var(--text-color);
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-block: 32px;
+  align-items: center;
+}
+
+.dropdown {
+  padding: 10px;
+  background-color: var(--color-neutral-800);
+  color: var(--color-neutral-200);
+  border: none;
+  font-size: var(--fs-16);
+  border-radius: 10px;
+}
+.select {
+  padding: 10px 20px;
+}
+option {
+  width: 20px;
+  padding: 10px 30px;
+}
+option i {
+  display: block;
+  font-size: 16px;
+  position: absolute;
+}
+
+.search-section {
+  text-align: center;
+}
+h1 {
+  font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
+  font-size: var(--fs-52);
+  padding: var(--fs-18);
+}
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--fs-32);
+  gap: 16px;
+}
+.search {
+  display: flex;
+  flex-wrap: wrap;
+
+  position: relative;
+  align-items: center;
+  width: 30%;
+}
+.search input {
+  /* position: absolute; */
+  padding: 0.8rem;
+  padding-left: 40px;
+  width: 100%;
+  border: none;
+  background-color: var(--color-neutral-800);
+  font-size: var(--fs-14);
+  border-radius: 10px;
+  color: white;
+}
+
+.search input::placeholder {
+  color: var(--color-neutral-300);
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  color: var(--color-neutral-300);
+  transform: translateY(-50%);
+}
+
+.btn {
+  padding: 0.8rem 20px;
+  background-color: var(--color-blue-500);
+  color: var(--text-color);
+  border-radius: 10px;
+  border: none;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding-inline: 16px;
+  }
+
+  .hero-logo img {
+    width: 160px;
+  }
+  .search-container {
+    flex-direction: column;
+  }
+  .search {
+    width: 100%;
+  }
+}
