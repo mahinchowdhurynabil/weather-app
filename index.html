@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <header class="hero wrapper">
+    <header class="hero">
       <div class="hero-logo">
         <a href=""> <img src="./assets/images/logo.svg" alt="" /></a>
       </div>
@@ -33,7 +33,7 @@
     </header>
 
     <main class="main">
-      <section class="search-section wrapper">
+      <section class="search-section">
         <h1>How's the sky looking today?</h1>
         <div class="search-container">
           <div class="search">
@@ -55,26 +55,29 @@
 
             <div class="weather-now">
               <img src="./assets/images/icon-sunny.webp" alt="" />
-              <p class="temp">68°</p>
+              <p class=".current-condition-value temp">68°</p>
             </div>
           </div>
 
-          <div class="weather-details">
-            <div class="detail">
-              <p class="detail-title">Feels Like</p>
-              <p class="detail-value">27°</p>
+          <div class="current-conditions">
+            <div class="current-condition">
+              <p class="current-condition-title">Feels Like</p>
+              <p class="current-condition-value">27°</p>
             </div>
-            <div class="detail">
-              <p class="detail-title">Feels Like</p>
-              <p class="detail-value">27°</p>
+
+            <div class="current-condition">
+              <p class="current-condition-title">Humidity</p>
+              <p class="current-condition-value">27%</p>
             </div>
-            <div class="detail">
-              <p class="detail-title">Feels Like</p>
-              <p class="detail-value">27°</p>
+
+            <div class="current-condition">
+              <p class="current-condition-title">Wind</p>
+              <p class="current-condition-value">27 km/h</p>
             </div>
-            <div class="detail">
-              <p class="detail-title">Feels Like</p>
-              <p class="detail-value">27°</p>
+
+            <div class="current-condition">
+              <p class="current-condition-title">Precipitation</p>
+              <p class="current-condition-value">27 mm</p>
             </div>
           </div>
 
@@ -83,64 +86,85 @@
             <div class="forecast">
               <div class="forecast-item">
                 <div class="day">Tue</div>
-                <img src="./assets/images/icon-storm.webp" alt="" />
+                <img
+                  src="./assets/images/icon-storm.webp"
+                  class="daily-day-icon"
+                />
                 <div class="temp-value">
-                  <p>68°</p>
-                  <p>57°</p>
+                  <p class="temp-high">68°</p>
+                  <p class="temp-low">57°</p>
                 </div>
               </div>
 
               <div class="forecast-item">
                 <div class="day">Tue</div>
-                <img src="./assets/images/icon-storm.webp" alt="" />
+                <img
+                  src="./assets/images/icon-storm.webp"
+                  class="daily-day-icon"
+                />
                 <div class="temp-value">
-                  <p>68°</p>
-                  <p>57°</p>
+                  <p class="temp-high">68°</p>
+                  <p class="temp-low">57°</p>
                 </div>
               </div>
 
               <div class="forecast-item">
                 <div class="day">Tue</div>
-                <img src="./assets/images/icon-storm.webp" alt="" />
+                <img
+                  src="./assets/images/icon-storm.webp"
+                  class="daily-day-icon"
+                />
                 <div class="temp-value">
-                  <p>68°</p>
-                  <p>57°</p>
+                  <p class="temp-high">68°</p>
+                  <p class="temp-low">57°</p>
                 </div>
               </div>
 
               <div class="forecast-item">
                 <div class="day">Tue</div>
-                <img src="./assets/images/icon-storm.webp" alt="" />
+                <img
+                  src="./assets/images/icon-storm.webp"
+                  class="daily-day-icon"
+                />
                 <div class="temp-value">
-                  <p>68°</p>
-                  <p>57°</p>
+                  <p class="temp-high">68°</p>
+                  <p class="temp-low">57°</p>
                 </div>
               </div>
 
               <div class="forecast-item">
                 <div class="day">Tue</div>
-                <img src="./assets/images/icon-storm.webp" alt="" />
+                <img
+                  src="./assets/images/icon-storm.webp"
+                  class="daily-day-icon"
+                />
                 <div class="temp-value">
-                  <p>68°</p>
-                  <p>57°</p>
+                  <p class="temp-high">68°</p>
+                  <p class="temp-low">57°</p>
                 </div>
               </div>
 
               <div class="forecast-item">
                 <div class="day">Tue</div>
-                <img src="./assets/images/icon-storm.webp" alt="" />
+                <img
+                  src="./assets/images/icon-storm.webp"
+                  class="daily-day-icon"
+                />
                 <div class="temp-value">
-                  <p>68°</p>
-                  <p>57°</p>
+                  <p class="temp-high">68°</p>
+                  <p class="temp-low">57°</p>
                 </div>
               </div>
 
               <div class="forecast-item">
                 <div class="day">Tue</div>
-                <img src="./assets/images/icon-storm.webp" alt="" />
+                <img
+                  src="./assets/images/icon-storm.webp"
+                  class="daily-day-icon"
+                />
                 <div class="temp-value">
-                  <p>68°</p>
-                  <p>57°</p>
+                  <p class="temp-high">68°</p>
+                  <p class="temp-low">57°</p>
                 </div>
               </div>
             </div>
@@ -151,17 +175,30 @@
           <div class="section-header">
             <div class="section-title">Hourly forecast</div>
             <select name="" id="" class="day-toggle dropdown">
-              <option value="Tuesday">Tuesday</option>
+              <option class="select-day" value="Tuesday">Tuesday</option>
             </select>
           </div>
 
           <div class="hourly-forecast-items">
             <div class="h-forecast-item">
-              <div>
-                <img src="./assets/images/icon-snow.webp" alt="" />
-                <p>3 PM</p>
-              </div>
-              <p>68°</p>
+              <img src="./assets/images/icon-snow.webp" class="h-forecast" />
+              <p class="h-forecast-title">3 PM</p>
+
+              <p class="h-forecast-temp">68°</p>
+            </div>
+
+            <div class="h-forecast-item">
+              <img src="./assets/images/icon-snow.webp" class="h-forecast" />
+              <p class="h-forecast-title">3 PM</p>
+
+              <p class="h-forecast-temp">68°</p>
+            </div>
+
+            <div class="h-forecast-item">
+              <img src="./assets/images/icon-snow.webp" class="h-forecast" />
+              <p class="h-forecast-title">3 PM</p>
+
+              <p class="h-forecast-temp">68°</p>
             </div>
           </div>
         </div>
