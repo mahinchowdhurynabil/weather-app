@@ -262,6 +262,7 @@ h1 {
 }
 .city-date {
   padding: 16px;
+  text-align: center;
 }
 
 .city {
@@ -342,6 +343,10 @@ h1 {
   background-color: var(--color-neutral-800);
   border-radius: 20px;
   padding: 20px 16px;
+
+  @media (width>= calc(700 / 16 * 1rem)) {
+    width: 350px;
+  }
 }
 
 .section-header {
