@@ -359,7 +359,11 @@ h1 {
 }
 .hourly-forecast-items {
   display: grid;
+  height: 100%;
   gap: 16px;
+  overflow-y: scroll;
+  scrollbar-width: auto;
+  scroll-behavior: smooth;
 }
 
 .h-forecast-item {
