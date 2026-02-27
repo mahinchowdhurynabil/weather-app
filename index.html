@@ -25,12 +25,82 @@
           <a href=""> <img src="./assets/images/logo.svg" alt="" /></a>
         </div>
 
-        <select class="dropdown" name="" id="">
-          <option value="">
+        <div class="dropdown-menu">
+          <div class="dropdown">
             <i class="fa-solid fa-gear"></i>
-            Units
-          </option>
-        </select>
+            <p>Units</p>
+            <i class="fa-solid fa-chevron-down"></i>
+            <ul class="menu">
+              <li class="unit">
+                <button
+                  data-type=""
+                  type="submit"
+                  data-unit=""
+                  class="btn-unit"
+                >
+                  Switch to Imperial
+                </button>
+              </li>
+
+              <p class="unit-title">Temperature</p>
+
+              <li class="temp-unit celsius">
+                <button
+                  data-type="temp"
+                  type="submit"
+                  data-unit="c"
+                  class="btn-unit"
+                >
+                  Celsius (&degC)
+                </button>
+
+                <i class="fa-solid fa-check"></i>
+              </li>
+
+              <li class="temp-unit fahrenheit">
+                <button
+                  data-type="temp"
+                  type="submit"
+                  data-unit="f"
+                  class="btn-unit"
+                >
+                  Fahrenheit (&degF)
+                </button>
+
+                <i class="fa-solid fa-check"></i>
+              </li>
+
+              <p class="unit-title">Wind Speed</p>
+
+              <li class="wind-unit kmh">
+                <button data-type="wind" data-unit="kmh" class="btn-unit">
+                  km/h
+                </button>
+
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="wind-unit mph">
+                <button data-type="wind" data-unit="mph" class="btn-unit">
+                  mph
+                </button>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <p class="unit-title">Precipation</p>
+              <li class="meter-unit mm">
+                <button data-type="rain" data-unit="mm" class="btn-unit">
+                  Millimetre (mm)
+                </button>
+                <i class="fa-solid fa-check"></i>
+              </li>
+              <li class="meter-unit cm">
+                <button data-type="rain" data-unit="cm" class="btn-unit">
+                  Centimetre (cm)
+                </button>
+                <i class="fa-solid fa-check"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
       </header>
 
       <main class="main">
@@ -82,21 +152,84 @@
               <div class="current-condition">
                 <p class="current-condition-title">Wind</p>
                 <p class="current-condition-value">
-                  <span class="wind"></span> km/h
+                  <span class="wind"></span> 
                 </p>
               </div>
 
               <div class="current-condition">
                 <p class="current-condition-title">Precipitation</p>
                 <p class="current-condition-value">
-                  <span class="precipitation"></span> mm
+                  <span class="precipitation"></span> 
                 </p>
               </div>
             </div>
 
             <div class="daily-forecast">
               <h2 class="section-title">Daily Forecast</h2>
-              <div class="forecast"></div>
+              <div class="forecast">
+                <div class="forecast-item">
+                  <div class="day">Sun</div>
+                  <img src="./assets/images/icon-storm.webp" alt="" />
+                  <div class="temp-value">
+                    <p>0°</p>
+                    <p>0°</p>
+                  </div>
+                </div>
+
+                <div class="forecast-item">
+                  <div class="day">Mon</div>
+                  <img src="./assets/images/icon-storm.webp" alt="" />
+                  <div class="temp-value">
+                    <p>0°</p>
+                    <p>0°</p>
+                  </div>
+                </div>
+
+                <div class="forecast-item">
+                  <div class="day">Tue</div>
+                  <img src="./assets/images/icon-storm.webp" alt="" />
+                  <div class="temp-value">
+                    <p>0°</p>
+                    <p>0°</p>
+                  </div>
+                </div>
+
+                <div class="forecast-item">
+                  <div class="day">Wed</div>
+                  <img src="./assets/images/icon-storm.webp" alt="" />
+                  <div class="temp-value">
+                    <p>0°</p>
+                    <p>0°</p>
+                  </div>
+                </div>
+
+                <div class="forecast-item">
+                  <div class="day">Thu</div>
+                  <img src="./assets/images/icon-storm.webp" alt="" />
+                  <div class="temp-value">
+                    <p>0°</p>
+                    <p>0°</p>
+                  </div>
+                </div>
+
+                <div class="forecast-item">
+                  <div class="day">Fri</div>
+                  <img src="./assets/images/icon-storm.webp" alt="" />
+                  <div class="temp-value">
+                    <p>0°</p>
+                    <p>0°</p>
+                  </div>
+                </div>
+
+                <div class="forecast-item">
+                  <div class="day">Sat</div>
+                  <img src="./assets/images/icon-storm.webp" alt="" />
+                  <div class="temp-value">
+                    <p>0°</p>
+                    <p>0°</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -134,6 +267,6 @@
         </section>
       </main>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>

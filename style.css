@@ -111,6 +111,11 @@ body {
 .hero-logo img {
   width: 200px;
 }
+
+.dropdown-menu {
+  position: relative;
+  display: inline-block;
+}
 .dropdown {
   padding: 10px;
   background-color: var(--color-neutral-800);
@@ -118,18 +123,84 @@ body {
   border: none;
   font-size: var(--fs-16);
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 }
-.select {
-  padding: 10px 20px;
-}
-option {
-  width: 20px;
-  padding: 10px 30px;
-}
-option i {
-  display: block;
-  font-size: 16px;
+.menu {
   position: absolute;
+  top: 42px;
+  right: 0;
+  list-style: none;
+  background-color: var(--color-neutral-800);
+  border: 1px solid var(--color-neutral-600);
+  border-radius: 15px;
+  padding: 8px;
+  width: 190%;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  /* transition: opacity 400ms ease-in-out; */
+}
+.dropdown:hover .menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-unit {
+  border: none;
+  font-size: var(--fs-16);
+  color: var(--text-color);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu > li {
+  position: relative;
+  padding: 12px 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 300ms ease-in-out;
+}
+
+.menu > li i {
+  transition: none;
+}
+
+.menu > li:hover {
+  background-color: var(--color-neutral-700);
+  border-radius: 8px;
+}
+.menu p {
+  color: hsl(240deg 3.54% 52.48%);
+  font-size: var(--fs-14);
+  cursor: none;
+}
+
+.menu .unit-title {
+  padding: 0px 12px;
+}
+
+.menu .unit-title:hover {
+  background-color: none;
+}
+.fa-check {
+  transition: 300ms;
+  visibility: hidden;
+}
+.active-unit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--color-neutral-700);
+}
+
+.active-unit .fa-check {
+  position: absolute;
+  right: 12px;
+  visibility: visible;
 }
 
 .search-section {
@@ -343,6 +414,8 @@ h1 {
   background-color: var(--color-neutral-800);
   border-radius: 20px;
   padding: 20px 16px;
+  height: 100vh;
+  overflow: hidden;
 
   @media (width>= calc(700 / 16 * 1rem)) {
     width: 350px;
@@ -358,12 +431,15 @@ h1 {
   margin-block-end: 8px;
 }
 .hourly-forecast-items {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   gap: 16px;
   overflow-y: scroll;
   scrollbar-width: auto;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scroll-margin: 10px;
 }
 
 .h-forecast-item {
@@ -375,6 +451,7 @@ h1 {
   padding: 10px 12px 10px 16px;
   align-items: center;
   gap: 8px;
+  width: 88%;
 }
 
 .h-forecast-title {
