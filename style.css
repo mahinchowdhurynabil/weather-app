@@ -141,7 +141,7 @@ body {
   z-index: 10;
   opacity: 0;
   visibility: hidden;
-  /* transition: opacity 400ms ease-in-out; */
+  transition: opacity 300ms ease-in-out;
 }
 .dropdown:hover .menu {
   opacity: 1;
@@ -414,8 +414,9 @@ h1 {
   background-color: var(--color-neutral-800);
   border-radius: 20px;
   padding: 20px 16px;
-  height: 100vh;
+  height: 75vh;
   overflow: hidden;
+  box-sizing: border-box;
 
   @media (width>= calc(700 / 16 * 1rem)) {
     width: 350px;

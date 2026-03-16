@@ -95,7 +95,7 @@ async function getWeatherData() {
   try {
     const { latitude, longitude } = appState.location;
 
-    // 🔥 Convert UI units to API units
+   
     const temperatureUnit =
       appState.units.temp === "c" ? "celsius" : "fahrenheit";
 
