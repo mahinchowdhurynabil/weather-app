@@ -1,5 +1,7 @@
 const searchInput = document.querySelector(".search-input");
 const searchButton = document.querySelector(".btn");
+const spinner = document.querySelector(".fa-spinner");
+const errorText = document.querySelector(".errorText");
 
 const cityName = document.querySelector(".city");
 const date = document.querySelector(".date");
@@ -73,6 +75,7 @@ searchInput.addEventListener("keyup", (e) => {
 });
 
 async function getLocation() {
+  errorText.classList.remove("error");
   try {
     const response = await fetch(
       `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(
@@ -88,6 +91,9 @@ async function getLocation() {
     getWeatherData();
   } catch (error) {
     console.error("Location fetch error:", error);
+
+    errorText.innerText = error;
+    errorText.classList.add("error");
   }
 }
 
@@ -95,7 +101,8 @@ async function getWeatherData() {
   try {
     const { latitude, longitude } = appState.location;
 
-    // 🔥 Convert UI units to API units
+    spinner.classList.add("loading");
+    // Convert UI units to API units
     const temperatureUnit =
       appState.units.temp === "c" ? "celsius" : "fahrenheit";
 
@@ -109,6 +116,8 @@ async function getWeatherData() {
     const weatherData = await response.json();
 
     renderWeather(weatherData);
+
+    spinner.classList.remove("loading");
   } catch (error) {
     console.error("Weather fetch error:", error);
   }
@@ -117,6 +126,8 @@ function renderWeather(data) {
   currentWeather(data.current);
   dailyForecast(data.daily);
   getHourlyForecastData(data.hourly);
+
+  console.log(data);
 }
 
 function currentWeather(currentValue) {
@@ -178,7 +189,7 @@ function dailyForecast(dailyData) {
 function getHourlyForecastData(hourlyData) {
   hourlyForecastItems.innerHTML = "";
 
-  hourlyData.time.slice(0, 12).forEach((timeValue, index) => {
+  hourlyData.time.slice(0, 24).forEach((timeValue, index) => {
     const hourlyItem = document.createElement("div");
     hourlyItem.classList.add("h-forecast-item");
 
@@ -202,6 +213,8 @@ function getHourlyForecastData(hourlyData) {
     hourlyItem.append(icon, hour, temp);
     hourlyForecastItems.appendChild(hourlyItem);
   });
+
+  console.log(hourlyData);
 }
 
 function getWeatherCodeName(code) {
