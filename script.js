@@ -109,12 +109,8 @@ async function getWeatherData() {
   try {
     const { latitude, longitude } = appState.location;
 
-<<<<<<< HEAD
-   
-=======
     spinner.classList.add("loading");
 
->>>>>>> restore-weather-app
     const temperatureUnit =
       appState.units.temp === "c" ? "celsius" : "fahrenheit";
     const windUnit = appState.units.wind === "kmh" ? "kmh" : "mph";

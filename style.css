@@ -452,14 +452,10 @@ h1 {
   background-color: var(--color-neutral-800);
   border-radius: 20px;
   padding: 20px 16px;
-<<<<<<< HEAD
-  height: 75vh;
   overflow: hidden;
   box-sizing: border-box;
-=======
+  height: 77vh;
   overflow: hidden;
-  height: 75vh;
->>>>>>> restore-weather-app
 
   @media (width>= calc(700 / 16 * 1rem)) {
     width: 350px;
@@ -470,6 +466,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
 }
 .section-header {
   margin-block-end: 8px;
