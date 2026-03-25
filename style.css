@@ -233,12 +233,14 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   margin-block: var(--fs-32);
-
   gap: 16px;
+
+  @media (min-width: 768px) {
+    position: relative;
+  }
 }
 .search {
   display: flex;
-  flex-wrap: wrap;
   position: relative;
   align-items: center;
   width: 450px;
@@ -304,15 +306,17 @@ h1 {
 
 .errorText {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-block: 4px;
 }
 
 .error {
   display: block;
-
   color: red;
   margin-right: auto;
 }
-
 .container {
   display: flex;
   justify-content: center;
