@@ -206,6 +206,7 @@ body {
 .search-section {
   text-align: center;
 }
+
 h1 {
   font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
   font-size: var(--fs-52);
@@ -233,10 +234,13 @@ h1 {
   justify-content: center;
   margin-block: var(--fs-32);
   gap: 16px;
+
+  @media (min-width: 768px) {
+    position: relative;
+  }
 }
 .search {
   display: flex;
-  flex-wrap: wrap;
   position: relative;
   align-items: center;
   width: 450px;
@@ -255,6 +259,27 @@ h1 {
 
 .search input::placeholder {
   color: var(--color-neutral-300);
+}
+
+.fa-spinner {
+  display: none;
+}
+
+.loading {
+  display: block;
+  position: absolute;
+  right: 8px;
+  animation: loading 2s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .fa-magnifying-glass {
@@ -279,6 +304,19 @@ h1 {
   background-color: var(--color-blue-700);
 }
 
+.errorText {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-block: 4px;
+}
+
+.error {
+  display: block;
+  color: red;
+  margin-right: auto;
+}
 .container {
   display: flex;
   justify-content: center;
@@ -414,9 +452,14 @@ h1 {
   background-color: var(--color-neutral-800);
   border-radius: 20px;
   padding: 20px 16px;
+<<<<<<< HEAD
   height: 75vh;
   overflow: hidden;
   box-sizing: border-box;
+=======
+  overflow: hidden;
+  height: 75vh;
+>>>>>>> restore-weather-app
 
   @media (width>= calc(700 / 16 * 1rem)) {
     width: 350px;
@@ -434,10 +477,11 @@ h1 {
 .hourly-forecast-items {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 90%;
   gap: 16px;
+  overflow: scroll;
   overflow-y: scroll;
-  scrollbar-width: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scroll-margin: 10px;
@@ -458,10 +502,12 @@ h1 {
 .h-forecast-title {
   font-size: var(--fs-18);
 }
+
 .h-forecast-temp {
   justify-self: end;
   color: var(--color-neutral-300);
 }
+
 img {
   width: 40px;
   height: auto;
